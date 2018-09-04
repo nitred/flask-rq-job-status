@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  flask-rq-status-redis-s:
+    image: redis:4
+    container_name: flask-rq-status-redis-c
+    ports:
+      - '6381:6379'
+    networks:
+      - flask-rq-status-n
+
+networks:
+  flask-rq-status-n:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.64.62.0/24

@@ -1,0 +1,6 @@
+flask:
+  SECRET_KEY: "super-secret-password"
+  RQ_REDIS_URL: 'redis://localhost:6381/0'
+  RQ_QUEUES:
+    - default
+  RQ_ASYNC: True
